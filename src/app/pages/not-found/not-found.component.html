@@ -1,0 +1,9 @@
+<mat-card *ngIf="visible" class="not-found-card">
+  <mat-card-header>
+    <mat-card-title>{{ notFoundMessage }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button (click)="onResetClick()" mat-button>{{ resetLinkText }}</button>
+    <button (click)="onManualNavigate()" mat-stroked-button>Go to Homepage</button>
+  </mat-card-content>
+</mat-card>
