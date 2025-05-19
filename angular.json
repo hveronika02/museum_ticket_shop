@@ -34,7 +34,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-             "baseHref": "/museum-ticket-shop/"
+             "baseHref": "/"
           },
           "configurations": {
             "production": {

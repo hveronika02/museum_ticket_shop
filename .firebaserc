@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "default": "museum-ticket-shop"
+  },
   "targets": {
     "museum-ticket-shop": {
       "hosting": {
@@ -6,9 +9,14 @@
           "museum-ticket-shop"
         ]
       }
+    },
+    "museum-ticket-shop-3cb31": {
+      "hosting": {
+        "museum-ticket-shop": [
+          "museum-ticket-shop-3cb31"
+        ]
+      }
     }
   },
-  "projects": {
-    "default": "museum-ticket-shop"
-  }
+  "etags": {}
 }
