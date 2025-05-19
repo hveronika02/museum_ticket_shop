@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { Cart } from 'src/app/shared/models/Cart';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CartItem } from 'src/app/shared/models/CartItem';
 
 @Component({
@@ -11,7 +12,7 @@ import { CartItem } from 'src/app/shared/models/CartItem';
 export class CartPageComponent {
   cart!: Cart;
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService, private router: Router) {
     this.setCart();
   }
 
@@ -36,5 +37,9 @@ export class CartPageComponent {
     this.cart = this.cartService.getCart();
     console.log(this.cart); 
     console.log(this.cart.items);
+  }
+
+  goHome(){
+    this.router.navigate(['/']);
   }
 }

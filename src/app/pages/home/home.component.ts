@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private ticketService: TicketService, private route: ActivatedRoute, private firebaseTestService: FirebaseTestService) {}
 
   ngOnInit(): void {
+    console.log('Trigger rebuild');
     this.firebaseTestService.getTestData().subscribe({
       next: data => {
         console.log('Data from Firestore:', data);
@@ -55,6 +56,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToTicket(id: string) {
+    console.log('Ticket');
     this.router.navigate(['/ticket', id]);
   }
 }
